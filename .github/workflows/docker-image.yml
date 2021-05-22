@@ -34,7 +34,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          image: pradurg/vrsabha-avatar
-          tags: v1, latest
+          file: vrsabha/Dockerfile
+          target: pradurg/avatar:vrsabha
+          tags: latest
           context: vrsabha
-          dockerfile: vrsabha/Dockerfile
