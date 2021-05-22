@@ -27,5 +27,6 @@ RUN pip install yfinance
 RUN pip install plotly
 RUN pip install cufflinks
 RUN pip install chart_studio
+RUN pip install dash
 
 RUN pip install ta-lib
