@@ -10,6 +10,7 @@ RUN apt-get install -y make
 RUN curl -L http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz -o /tmp/ta-lib-0.4.0-src.tar.gz
 RUN tar -zxf /tmp/ta-lib-0.4.0-src.tar.gz -C /tmp
 RUN cd /tmp/ta-lib/
+RUN ls
 RUN autoconf
 RUN bash ./configure
 RUN make
