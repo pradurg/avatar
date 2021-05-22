@@ -5,17 +5,13 @@ RUN apt-get update --fix-missing
 
 RUN apt-get install -y sudo
 RUN apt-get install -y curl
-RUN apt-get install -y autoconf
 RUN apt-get install -y make
 RUN curl -L http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz -o /tmp/ta-lib-0.4.0-src.tar.gz
 RUN tar -zxf /tmp/ta-lib-0.4.0-src.tar.gz -C /tmp
-RUN cd /tmp/ta-lib/
-RUN ls
-RUN autoconf
+WORKDIR /tmp/ta-lib
 RUN bash ./configure
 RUN make
 RUN make install
-RUN cd -
 
 RUN apt-get install -y python3
 RUN apt-get install -y python3-requests
