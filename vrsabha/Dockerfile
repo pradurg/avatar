@@ -28,5 +28,6 @@ RUN pip install plotly
 RUN pip install cufflinks
 RUN pip install chart_studio
 RUN pip install dash
+RUN pip install dash-bootstrap-components
 
 RUN pip install ta-lib
