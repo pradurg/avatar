@@ -22,8 +22,8 @@ RUN make
 RUN make install
 
 RUN pip install numpy
-
 RUN pip install pandas
+RUN pip install fsspec
 
 # Feed Data sources
 RUN pip install yfinance
