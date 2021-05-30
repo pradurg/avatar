@@ -13,6 +13,7 @@ RUN pip install --upgrade pip
 
 RUN pip install -U setuptools
 
+# Build ta-lib binaries
 RUN curl -L http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz -o /tmp/ta-lib-0.4.0-src.tar.gz
 RUN tar -zxf /tmp/ta-lib-0.4.0-src.tar.gz -C /tmp
 WORKDIR /tmp/ta-lib
@@ -23,7 +24,12 @@ RUN make install
 RUN pip install numpy
 
 RUN pip install pandas
+
+# Feed Data sources
 RUN pip install yfinance
+RUN pip install nsepy
+
+# Graphs
 RUN pip install plotly
 RUN pip install cufflinks
 RUN pip install chart_studio
